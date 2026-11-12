@@ -1,7 +1,7 @@
 @tool
 extends RefCounted
 ## O laço do agente: manda a conversa para a IA (API compatível com OpenAI), executa as ferramentas que ela pedir
-## e repete até ela responder em texto. Funciona com os Modelos Fliper, OpenRouter ou OpenAI (chave da pessoa).
+## e repete até ela responder em texto. Funciona com os Modelos Fliper (plano ou créditos, conta em fliperstudio.com/account).
 
 signal falou(texto: String)
 signal agiu(resumo: String)
@@ -9,8 +9,6 @@ signal terminou
 
 const PROVEDORES := {
 	"fliper": {"nome": "Fliper AI", "url": "https://fliperstudio.com/ia/v1", "modelo": "fliper-pro"},
-	"openrouter": {"nome": "My OpenRouter key", "url": "https://openrouter.ai/api/v1", "modelo": "poolside/laguna-s-2.1:free"},
-	"openai": {"nome": "OpenAI", "url": "https://api.openai.com/v1", "modelo": "gpt-5-mini"},
 }
 const MAX_PASSOS := 30
 
@@ -113,7 +111,7 @@ func _resumo(nome: String, a: Dictionary) -> String:
 func _chamar() -> Dictionary:
 	var p: Dictionary = PROVEDORES.get(provedor, PROVEDORES.fliper)
 	if chave == "":
-		return {"erro": "Missing key / Falta a chave: ⚙ → openrouter.ai/keys (free)."}
+		return {"erro": "Sign in / Entre na sua conta Fliper: ⚙ → chave do fliperstudio.com/account."}
 	var http := HTTPRequest.new()
 	http.timeout = 180
 	dono.add_child(http)

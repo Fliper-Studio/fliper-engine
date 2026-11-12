@@ -9,8 +9,8 @@ and export to Windows, macOS, Linux, Android, iOS and the web.
 - **Fliper panel in every project:** chat on the right side of the editor. It reads and writes your project,
   runs the game headless to catch errors, opens it for you to play, looks at the screen and pulls free
   sprites from the [Fliper Feira](https://fliperstudio.com/feira/).
-- **Bring your AI:** Fliper models (key at [fliperstudio.com/account](https://fliperstudio.com/account)),
-  or your own OpenRouter / OpenAI key. Your key stays in your editor settings, never in the project.
+- **Fliper AI:** Fliper models with your plan or credits (key at [fliperstudio.com/account](https://fliperstudio.com/account)).
+  Your key stays in your editor settings, never in the project.
 - **Publish:** one click to the Fliper Arcade, or export to Steam.
 
 ## Download

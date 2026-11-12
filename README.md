@@ -14,7 +14,7 @@ Fliper Engine = official **Godot Engine 4.7.2-stable** + the files in [`overlay/
 
 | | |
 |---|---|
-| `overlay/misc/fliper/addon/fliper/` | the Fliper AI panel (GDScript), copied into every new project |
+| `overlay/misc/fliper/addon/fliper/` | the Fliper AI panel (GDScript), copied into every new project. **This is the only copy:** the Fliper Kit copies it from here |
 | `overlay/editor/...` | Fliper editor theme and new-project defaults ([diff](mudancas-no-godot.diff)) |
 | `overlay/misc/fliper/marca.py` | generates the logo, icons and splash |
 | `instalador.iss` | Windows installer (Inno Setup) |
@@ -32,7 +32,7 @@ cd motor && scons platform=linuxbsd target=editor production=yes   # or windows 
 
 ## Privacy
 
-Fliper adds no telemetry to the editor. The AI panel only talks to the AI you choose (Fliper, OpenRouter or OpenAI),
+Fliper adds no telemetry to the editor. The AI panel only talks to the Fliper models,
 when you send a message. "Sign in with Fliper" opens fliperstudio.com in your browser to connect your account.
 
 ## License and credits
